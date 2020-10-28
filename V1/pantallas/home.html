@@ -31,7 +31,7 @@
     </center>
     <a href="../pantallas/profile.html" title="Mi Perfil"><i class="fas fa-user" id="l1"></i><span>Profile</span></a>
     <a href="../pantallas/home.html" title="Home"><i class="fas fa-home" id="l2"></i><span>Home</span></a>
-    <a href="../pantallas/profile.html" title="Mis Albunes"><i class="fas fa-camera" id="l3"></i><span>My Albums</span></a> 
+    <a href="../pantallas/fotos.html" title="Mis Albunes"><i class="fas fa-camera" id="l3"></i><span>My Albums</span></a> 
     <a href="../pantallas/login.html" id="session" title="Cerrar Sesion"><i class="fas fa-sign-out-alt" id="l4"></i><span>Logout</span></a>
  </div>  
 
@@ -72,15 +72,17 @@
         <div id="posteo">
          <label for="exampleInputEmail1" id="subir">Subir imagen</label>
             <input type="text" class="form-control" id="fname" >
-            <i class="fas fa-image" id="image"></i>
+            <form enctype="multipart/form-data" action="uploader.php" method="POST">
+            <i class="fas fa-image" id="image" type="button"></i>
+            </form>
             <br>
         <label for="exampleInputEmail1" id="area">Descripcion de la imagen</label>
              <textarea name="comentarios" rows="40" cols="40" id="fdescripcion" class="form-control"></textarea>
         
          <select name="tipo" id="tipo">
             <option>Aves</option>
-            <option>Plantas</option>
-            <option>Animales</option>
+            <option>Comida</option>
+            <option>Mamiferos</option>
             <option>Reser. Eco</option>
         </select>
         <input type="button" value="Guardar" id="save">
